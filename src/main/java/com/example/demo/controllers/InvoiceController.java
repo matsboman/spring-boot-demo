@@ -1,7 +1,5 @@
 package com.example.demo.controllers;
 
-//import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -64,14 +62,4 @@ public class InvoiceController {
 	public SupplierSummary listSupplierSummary(@RequestParam("supplierId") String supplierId) {
 		return invoiceService.listSupplierSummary(supplierId);
 	}
-
-//	@GetMapping("/view/{id}")
-//	public Transaction viewTransactionById(@PathVariable ("id") Long id) {
-//		Optional<Transaction> transaction = transactionService.getTransaction(id);
-//		if(transaction.isPresent()) {
-//			return transaction.get();
-//		}
-//		
-//		throw new InvalidTransactionReferenceException("Invalid transaction reference provided");
-//	}
 }

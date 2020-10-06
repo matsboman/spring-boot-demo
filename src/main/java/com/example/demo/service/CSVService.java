@@ -22,7 +22,7 @@ public class CSVService {
       List<Invoice> tutorials = CSVHelper.csvToInvoices(file.getInputStream());
       repository.saveAll(tutorials);
     } catch (IOException e) {
-      throw new RuntimeException("fail to store csv data: " + e.getMessage());
+      throw new RuntimeException("Failed to store csv data: " + e.getMessage());
     }
   }
 }
